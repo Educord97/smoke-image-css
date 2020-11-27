@@ -1,0 +1,110 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+  img {
+    max-width: 100%;
+  }
+  
+  
+  .container-hero {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  
+  }
+  
+  .title {
+    color: white;
+    position: absolute;
+    z-index: 100;  
+    text-align: center;
+  }
+  
+  .title h1 {
+    text-transform: uppercase;
+    font-size: 4rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    letter-spacing: 5px;
+    font-weight: bold;
+  }
+  
+  .title h5 {
+    font-size: 2.5rem;
+    letter-spacing: 6px;
+    font-weight: bold;
+  }
+  
+  .title p  {
+    background:linear-gradient(to right, transparent, rgba(255, 255, 255, 0.2), transparent);
+    padding: 10px;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 8px;
+    font-size: 1.2rem;
+   
+  }
+  
+  .cloud {
+    background-color: rgba(0,0,0, .4);
+    position: absolute;
+    bottom: 0;
+    width: 250.625em;
+    height: 100vh;
+    animation: rotationLeft 80s linear infinite;
+    z-index: 1;
+  }
+  
+  @keyframes rotationLeft {
+    0% {
+      transform: translateZ(0);
+    }
+    100% {
+      transform: translate3d(-50%,0,0);
+    }
+  
+  }
+  
+  .img_cloud {
+    margin-top: 4rem;
+    
+  }
+
+  @media screen and (max-width: 800px) {
+
+    .title h5 {
+        font-size: 1.3rem;
+      }
+
+      .title h1 {
+        font-size: 2.5rem;
+      }
+
+      .title p {
+        font-size: .75rem;
+
+      }
+
+  }
+
+  @media screen and (max-width: 450px) {
+
+    .title h5 {
+        font-size: .75rem;
+      }
+
+      .title h1 {
+        font-size: 1.5rem;
+      }
+
+      .title p {
+        font-size: .55rem;
+      }
+
+  }
