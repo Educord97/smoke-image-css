@@ -57,11 +57,11 @@
     bottom: 0;
     width: 250.625em;
     height: 100vh;
-    animation: rotationLeft 80s linear infinite;
+    animation: translateLeft3d 80s linear infinite;
     z-index: 1;
   }
   
-  @keyframes rotationLeft {
+  @keyframes translateLeft3d {
     0% {
       transform: translateZ(0);
     }
