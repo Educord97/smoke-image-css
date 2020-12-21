@@ -1,8 +1,16 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
 * {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   overflow: hidden;
   }
   img {
@@ -10,9 +18,15 @@
   }
   .container-hero {
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   height: 100vh;
   }
   .title {
@@ -35,6 +49,8 @@
   font-weight: bold;
   }
   .title p  {
+  background:-webkit-gradient(linear, left top, right top, from(transparent), color-stop(rgba(255, 255, 255, 0.2)), to(transparent));
+  background:-o-linear-gradient(left, transparent, rgba(255, 255, 255, 0.2), transparent);
   background:linear-gradient(to right, transparent, rgba(255, 255, 255, 0.2), transparent);
   padding: 10px;
   text-transform: uppercase;
@@ -48,15 +64,28 @@
   bottom: 0;
   width: 250.625em;
   height: 100vh;
-  animation: translateLeft3d 80s linear infinite;
+  -webkit-animation: translateLeft3d 80s linear infinite;
+          animation: translateLeft3d 80s linear infinite;
   z-index: 1;
+  }
+  @-webkit-keyframes translateLeft3d {
+  0% {
+  -webkit-transform: translateZ(0);
+          transform: translateZ(0);
+  }
+  100% {
+  -webkit-transform: translate3d(-50%,0,0);
+          transform: translate3d(-50%,0,0);
+  }
   }
   @keyframes translateLeft3d {
   0% {
-  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+          transform: translateZ(0);
   }
   100% {
-  transform: translate3d(-50%,0,0);
+  -webkit-transform: translate3d(-50%,0,0);
+          transform: translate3d(-50%,0,0);
   }
   }
   .img_cloud {
